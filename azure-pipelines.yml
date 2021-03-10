@@ -10,10 +10,13 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- bash: |
-   #!/bin/bash
-   echo 'Hello from bash script!''
-  displayName: 'Run a one-line script'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo 'Hello world from bash script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
